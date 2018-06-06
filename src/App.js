@@ -4,6 +4,8 @@ import './App.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './toastify.css';
+import GithubRibbon from './components/GithubRibbon'
+import packageJson from "../package.json"
 
 class App extends Component {
 
@@ -35,6 +37,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Pick a button to start toasting</h1>
+          <GithubRibbon repositoryUrl={packageJson.homepage}/>>
         </header>
         <p className="App-intro">
           <button onClick={this.success} style={{margin:"10px"}}>
