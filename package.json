@@ -1,6 +1,7 @@
 {
   "name": "react-toastify-demo",
   "version": "0.1.0",
+  "homepage": "https://shirbr510.github.io/react-toastify-demo/",
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
@@ -9,9 +10,14 @@
     "react-toastify": "^4.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
