@@ -1,5 +1,6 @@
 # react-toastify-demo
 a tiny demo of customized usage of react-toastify
+DEMO: https://shirbr510.github.io/react-toastify-demo
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
