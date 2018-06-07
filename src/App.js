@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './toastify.css';
+import './App.scss';
 import GithubRibbon from './components/GithubRibbon'
-import packageJson from "../package.json"
+import {ToastContainer, success, error, info} from './components/Toasts'
 
 class App extends Component {
-
-  error(){
-    toast("Oh no! something went horribly wrong!", {type:"error", className:"custom-error-toast"})
-  }
-
-  success(){
-    toast("Whatever you tried doing, it worked!", {type:"success", className:"custom-success-toast"})
-  }
-
-  info(){
-    toast("this is a very important piece of information", {type:"info", className:"custom-info-toast"})
-  }
 
   render() {
     return (
@@ -37,16 +22,16 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Pick a button to start toasting</h1>
-          <GithubRibbon repositoryUrl={packageJson.homepage}/>>
+          <GithubRibbon repositoryUrl={"https://github.com/shirbr510/react-toastify-demo"}/>
         </header>
         <p className="App-intro">
-          <button onClick={this.success} style={{margin:"10px"}}>
+          <button onClick={()=>success("Whatever you tried doing, it worked!")} style={{margin:"10px"}}>
             I'm successful!
           </button>
-          <button onClick={this.error} style={{margin:"10px"}}>
+          <button onClick={()=>error("Oh no! something went horribly wrong!")} style={{margin:"10px"}}>
             I'm a failure!
           </button>
-          <button onClick={this.info} style={{margin:"10px"}}>
+          <button onClick={()=>info("this is a very important piece of information!")} style={{margin:"10px"}}>
             I'm just here to provide info!
           </button>
         </p>
