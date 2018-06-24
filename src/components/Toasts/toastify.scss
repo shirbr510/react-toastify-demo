@@ -22,6 +22,10 @@ $toast-info-color: #0088CE;
     @extend .Toastify__toast-container--center;
 }
 
+.Toastify__toast-body{
+    padding: 10px;
+  }
+
 .custom-toast{
     min-height: 45px;
 }
