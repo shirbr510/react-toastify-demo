@@ -15,7 +15,8 @@ const CustomToastContainer = props =>{
             position="top-center"
             autoClose={5000}
             newestOnTop
-            closeOnClick = {false}
+            draggable
+            closeOnClick
             rtl = {false}
             pauseOnVisibilityChange = {false}
             pauseOnHover
